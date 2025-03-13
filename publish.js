@@ -33,7 +33,7 @@ function getRandomString() {
     return result;
 }
 var emails = [
-    'sqhub3678@gmail.com'
+    '91dsp2008@gmail.com'
 ];
 
 var urls=[];
@@ -59,21 +59,19 @@ for(var i =0;i<urls.length*3;i++){
 //     'https://' + getRandomSubdomain() + '.vildiho.cc'
 // ];
 var otherUrls = [
-    'https://gitlab.com/dizhi8',
-    'https://dizhi8.pages.dev',
-    'https://dizhi33.github.io',
-    'https://dizhi8.netlify.app'
+    'https://91zuo.pages.dev',
+    'https://91zuo.github.io'
 ];
 var foreverUrls = [
-	'https://91porna.com',
+	'https://91zuo.com',
 	JumpPage,
-	'https://91porn.fun',
-	'https://91pornvideo.com',
-    'https://91pornforum.com'
+	'https://91res.com',
+	'https://91sos.com',
+	'https://91shuo.com'
 ];
 var notices = [
     '* 我们推荐PC和Andriod手机用户使用Chrome(谷歌)浏览器访问，iPhone用户我们建议您使用手机自带Safria浏览器访问。',
-    //'* 为了防止域名劫持而无法访问，请设置手机和PC的DNS，我们推荐使用8.8.8.8和1.1.1.1。',
+    '* 为了防止域名劫持而无法访问，请设置手机和PC的DNS，我们推荐使用8.8.8.8和1.1.1.1。',
     '* 大陆地区用户我们建议您可以使用VPN或者代理的方式来访问我们的永久地址。',
 	'* 大陆地区用户我们强烈建议您截图收藏当前页面。'
 ];
@@ -144,7 +142,7 @@ window.onload = function () {
     var newFavoritesElem =  createFieldElem({title: '<font color=red><b>Ctrl+D</b></font> 收藏此页，永不迷路', items: ""});
     mainElem.appendChild(newFavoritesElem);
     // newest urls
-    var newestFieldElem = createFieldElem({title: '最新地址', items: newestUrls, text: '请使用https://协议访问91视频'});
+    var newestFieldElem = createFieldElem({title: '最新地址', items: newestUrls, text: '请使用https://协议访问91短视频'});
     mainElem.appendChild(newestFieldElem);
 
     // other urls
