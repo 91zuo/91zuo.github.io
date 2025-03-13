@@ -41,7 +41,7 @@ var urls=[];
 	urls.push(".bpymldg.com");
 	urls.push(".qvzrhja.com");
 
-var JumpPage="https://91wang8.com";
+var JumpPage="";
 
 var newestUrls = [];
 
