@@ -1,0 +1,136 @@
+var subdomains = [
+    'thu',  // 清华大学 (Tsinghua University)
+    'pku',  // 北京大学 (Peking University)
+    'fdu',  // 复旦大学 (Fudan University)
+    'sjtu', // 上海交通大学 (Shanghai Jiao Tong University)
+    'zju',  // 浙江大学 (Zhejiang University)
+    'nju',  // 南京大学 (Nanjing University)
+    'xmu',  // 厦门大学 (Xiamen University)
+    'sysu', // 中山大学 (Sun Yat-sen University)
+    'whu',  // 武汉大学 (Wuhan University)
+    'jlu',  // 吉林大学 (Jilin University)
+    'scu',  // 四川大学 (Sichuan University)
+    'ruc',  // 中国人民大学 (Renmin University of China)
+    'bnu',  // 北京师范大学 (Beijing Normal University)
+    'nku',  // 南开大学 (Nankai University)
+    'tju',  // 同济大学 (Tongji University)
+    'sdu',  // 山东大学 (Shandong University)
+    'hust', // 华中科技大学 (Huazhong University of Science and Technology)
+    'xjtu',  // 西安交通大学 (Xi'an Jiaotong University)
+    'hit',  // 哈尔滨工业大学 Harbin Institute of Technology
+];
+function getRandomSubdomain() {
+    var index = Math.floor(Math.random() * subdomains.length);
+    return subdomains[index];
+}
+function getRandomString() {
+    var result = '';
+    var characters = 'abcdefghijklmnopqrstuvwxyz';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < 3; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+var emails = [
+    'dizhi9191@gmail.com'
+];
+var newestUrls = [
+	'https://' + getRandomString() + '.jsav2.com',
+	'https://' + getRandomString() + '.jsav3.com',
+	'https://' + getRandomString() + '.jsav4.com',    
+    'https://' + getRandomString() + '.x9av1.com',
+    'https://' + getRandomString() + '.x9av2.com',
+    'https://' + getRandomString() + '.x9av3.com',
+    'https://' + getRandomString() + '.x9av4.com',
+	'https://' + getRandomString() + '.x9av5.com',
+	'https://' + getRandomString() + '.jsav6.com',
+	'https://' + getRandomString() + '.jsav7.com',
+	'https://' + getRandomString() + '.jsav8.com',	
+    'https://' + getRandomString() + '.x9av6.com',
+    'https://' + getRandomString() + '.x9av7.com',
+    'https://' + getRandomString() + '.x9av8.com',	
+	'https://' + getRandomString() + '.x9av9.com',
+	'https://' + getRandomString() + '.x9av10.com'
+];
+var otherUrls = [
+	'https://dizhi88.gitbook.io',
+	'https://jiuse.pages.dev'
+];
+var foreverUrls = [
+	'https://91porny.com',
+	'https://jiuse.icu',
+	'https://九色.com'
+];
+var notices = [
+    '* 我们推荐PC和Andriod手机用户使用Chrome(谷歌)浏览器访问，iPhone用户我们建议您使用手机自带Safria浏览器访问。',
+    //'* 为了防止域名劫持而无法访问，请设置手机和PC的DNS，我们推荐使用8.8.8.8和1.1.1.1。',
+    '* 大陆地区用户我们建议您可以使用VPN或者代理的方式来访问我们的永久地址。',
+	'* 大陆地区用户我们强烈建议您截图收藏当前页面(jiuse.pages.dev)。'
+];
+
+function createFieldElem(option) {
+    var title = option.title;
+    var items = option.items;
+    var plainText = option.plainText;
+    var classStr = option.classStr;
+    var text = option.text;
+
+    var fieldElem = document.createElement('div');
+    var fieldClass = ['field', classStr].join(' ');
+    fieldElem.setAttribute('class', fieldClass);
+
+    var titleElem = document.createElement('h4');
+    titleElem.setAttribute('class', 'title');
+    titleElem.innerHTML = title;
+    fieldElem.appendChild(titleElem);
+
+    var ulElem = document.createElement('ul');
+    var htmlStr = ''
+    for (var i = 0; i < items.length; i++) {
+        if (plainText) {
+            htmlStr = htmlStr + '<li>' + items[i] + '</li>';
+        } else {
+            htmlStr = htmlStr + '<li><a href="' + items[i] + '" target="_blank">' + items[i] + '</a></li>';
+        }
+    }
+
+    // For text
+    if (text) {
+        htmlStr = htmlStr + '<li class="text">' + text + '</li>';
+    }
+
+    ulElem.innerHTML = htmlStr;
+    fieldElem.appendChild(ulElem);
+    return fieldElem;
+}
+
+window.onload = function () {
+    var mainElem = document.getElementById('main');
+    // append logo
+    var logoElem = document.createElement('div');
+    logoElem.setAttribute('class', 'brand');
+    logoElem.setAttribute('id', 'logo');
+    logoElem.innerHTML = '九 <span>色</span><span class="flag">视频</span>'
+    mainElem.appendChild(logoElem);
+
+    // newest urls
+    var newestFieldElem = createFieldElem({title: '最新地址', items: newestUrls, text: '请使用https://协议访问九色视频'});
+    mainElem.appendChild(newestFieldElem);
+
+    // other urls
+    var otherFieldElem = createFieldElem({title: '请收藏地址发布页', items: otherUrls});
+    mainElem.appendChild(otherFieldElem);
+
+    // email
+    var mailFieldElem = createFieldElem({title: '发送邮件获得最新地址', items: emails, plainText: true});
+    mainElem.appendChild(mailFieldElem);
+
+    // forever urls
+    var foreverFieldElem = createFieldElem({title: '永久地址', items: foreverUrls});
+    mainElem.appendChild(foreverFieldElem);
+
+    // Description
+    var noticeFieldElem = createFieldElem({title: '注意事项', items: notices, plainText: true, classStr: 'desc'});
+    mainElem.appendChild(noticeFieldElem);
+}
