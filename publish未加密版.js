@@ -36,12 +36,8 @@ var emails = [
     'sqhub3678@gmail.com'
 ];
 var newestUrls = [
-    'https://' + getRandomSubdomain() + '.vikxddcy.org',    
-    'https://' + getRandomSubdomain() + '.vikxddcy.org',
-    'https://' + getRandomSubdomain() + '.vikxddcy.org',    
-    'https://' + getRandomSubdomain() + '.vildiho.cc',
-	'https://' + getRandomSubdomain() + '.vildiho.cc',    
-    'https://' + getRandomSubdomain() + '.vildiho.cc'
+    'https://db1.jgrikdk.xyz',    
+    'https://db1.tmuddod.xyz',
 ];
 var otherUrls = [
     'https://gitlab.com/91dizhi/go',
