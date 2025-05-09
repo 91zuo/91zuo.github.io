@@ -46,18 +46,10 @@ var JumpPage="";
 var newestUrls = [];
 
 
-for(var i =0;i<urls.length*3;i++){
-    newestUrls.push( 'https://' + getRandomSubdomain() +urls[randomNum(0,urls.length-1)]);
-}
+var otherUrls = [
+    'tmuddod.xyz',
+    'db1.jgrikdk.xyz'
 
-// var newestUrls = [
-//     'https://' + getRandomSubdomain() + '.vikxddcy.org',    
-//     'https://' + getRandomSubdomain() + '.vikxddcy.org',
-//     'https://' + getRandomSubdomain() + '.vikxddcy.org',    
-//     'https://' + getRandomSubdomain() + '.vildiho.cc',
-// 	'https://' + getRandomSubdomain() + '.vildiho.cc',    
-//     'https://' + getRandomSubdomain() + '.vildiho.cc'
-// ];
 var otherUrls = [
     'https://91zuo.pages.dev',
     'https://91zuo.github.io'
