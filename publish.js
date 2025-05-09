@@ -63,12 +63,7 @@ var otherUrls = [
     'https://91zuo.github.io'
 ];
 var foreverUrls = [
-	'https://91zuo.com',
-	JumpPage,
-	'https://91res.com',
-	'https://91sos.com',
-	'https://91shuo.com'
-];
+	'https://91zuo.com'];
 var notices = [
     '* 我们推荐PC和Andriod手机用户使用Chrome(谷歌)浏览器访问，iPhone用户我们建议您使用手机自带Safria浏览器访问。',
     '* 为了防止域名劫持而无法访问，请设置手机和PC的DNS，我们推荐使用8.8.8.8和1.1.1.1。',
