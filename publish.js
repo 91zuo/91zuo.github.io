@@ -43,7 +43,9 @@ var urls=[];
 
 var JumpPage="";
 
-var newestUrls = [];
+var newestUrls = [    
+    'tmuddod.xyz',
+    'db1.jgrikdk.xyz'];
 
 
 var otherUrls = [
