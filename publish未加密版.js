@@ -33,24 +33,29 @@ function getRandomString() {
     return result;
 }
 var emails = [
-    'sqhub3678@gmail.com'
+    '91dsp2008@gmail.com'
 ];
-var newestUrls = [
-    'https://db1.jgrikdk.xyz',    
-    'https://db1.tmuddod.xyz',
+
+var urls=[
+	'https://db1.jgrikdk.xyz',
+	'https://db1.tmuddod.xyz',
 ];
+                                                                                                                  
+var JumpPage="https://91zuo.com";
+
+var newestUrls = [];
+
+
+for(var i =0;i<urls.length*3;i++){
+    newestUrls.push( 'https://' + getRandomSubdomain() +'.' + urls[randomNum(0,urls.length-1)]);
+}
+
 var otherUrls = [
-    'https://gitlab.com/91dizhi/go',
-    'https://dizhi8.pages.dev',
-    'https://dizhi22.github.io',
-    'https://bitbucket.org/91dizhi/go',
-    'https://www.ebay.com/usr/weia-31'
+	'https://91zuo.github.io',
+	'https://91zuo.pages.dev',
 ];
 var foreverUrls = [
-	'https://91porna.com',
-	'https://91porn.fun',
-	'https://91pornvideo.com',
-    'https://91pornforum.com'
+    'https://91zuo.com',JumpPage
 ];
 var notices = [
     '* 我们推荐PC和Andriod手机用户使用Chrome(谷歌)浏览器访问，iPhone用户我们建议您使用手机自带Safria浏览器访问。',
@@ -58,6 +63,21 @@ var notices = [
     '* 大陆地区用户我们建议您可以使用VPN或者代理的方式来访问我们的永久地址。',
 	'* 大陆地区用户我们强烈建议您截图收藏当前页面。'
 ];
+
+//生成从minNum到maxNum的随机数
+function randomNum(minNum,maxNum){ 
+    switch(arguments.length){ 
+        case 1: 
+            return parseInt(Math.random()*minNum+1,10); 
+        break; 
+        case 2: 
+            return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
+        break; 
+            default: 
+                return 0; 
+            break; 
+    } 
+} 
 
 function createFieldElem(option) {
     var title = option.title;
@@ -103,18 +123,18 @@ window.onload = function () {
     var logoElem = document.createElement('div');
     logoElem.setAttribute('class', 'brand');
     logoElem.setAttribute('id', 'logo');
-    logoElem.innerHTML = ' <img src="logo.png"  width="180"/>'
+    logoElem.innerHTML = ' <img src="logo.png"  width="180" style="margin-bottom: 10px;"/>'
     mainElem.appendChild(logoElem);
 
     //收藏  ‘<br /> \n <br /> <br /> 按 <font color=red><b>Ctrl+D</b></font> 收藏此页，永不迷路
     var newFavoritesElem =  createFieldElem({title: '<font color=red><b>Ctrl+D</b></font> 收藏此页，永不迷路', items: ""});
     mainElem.appendChild(newFavoritesElem);
     // newest urls
-    var newestFieldElem = createFieldElem({title: '最新地址', items: newestUrls, text: '请使用https://协议访问91视频'});
+    var newestFieldElem = createFieldElem({title: '最新地址', items: newestUrls, text: '请使用https://协议访问91短视频'});
     mainElem.appendChild(newestFieldElem);
 
     // other urls
-    var otherFieldElem = createFieldElem({title: '国家管控太严，网址经常被墙<br />务必保存下面4个地址发布页', items: otherUrls});
+    var otherFieldElem = createFieldElem({title: '由于风控原因，网址经常被墙<br />务必保存下面所有地址发布页', items: otherUrls});
     mainElem.appendChild(otherFieldElem);
 
     // email
