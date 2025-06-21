@@ -24,7 +24,7 @@ function randomNum(minNum, maxNum) {
 // ======================= 地址配置 ===========================
 
 var baseDomains = [
-    'ajmvlng.xyz',
+    'abprusq.xyz',
 ];
 
 var emails = ['91dsp2008@gmail.com'];
